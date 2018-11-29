@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/offers"
+        android:icon="@drawable/ic_local_offer_black_24dp"
+        android:title="@string/offers"
+
+        />
+    <item android:id="@+id/mistadded"
+        android:icon="@drawable/mostadded"
+        android:title="@string/mostadded"
+        />
+    <item android:id="@+id/resourses"
+    android:icon="@drawable/ic_people_outline_black_24dp"
+    android:title="@string/resources"
+    />
+    <item android:id="@+id/favourites"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="@string/mywishlist"
+        />
+</menu>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">GO AHEAD</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgetpassword">Forget password?</string>
+    <string name="signin">Sign in</string>
+    <string name="or">OR</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="myaccount">My Account</string>
+    <string name="selectcategory">Select Category</string>
+    <string name="offers">Offers</string>
+    <string name="mostadded">Most Added</string>
+    <string name="resources">Resourses</string>
+    <string name="mywishlist">My Wish List</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="news">NEWS</string>
+    <string name="resturants">RESTURANTS</string>
+    <string name="shopping">SHOPPING</string>
+    <string name="sports">SPORTS</string>
+    <string name="generalservice">GENERAL SERVICE</string>
+    <string name="facebook_id">1196245197191328</string>
+    <string name="skip">Skip?</string>
+    <string name="loginandregist">Login &amp; Register</string>
+    <string name="editdata">Edit Personal Information</string>
+    <string name="regist">Sign Up</string>
+    <string name="email">Email Address</string>
+    <string name="phone">Phone</string>
+    <string name="haveaccount">Have an account?</string>
+    <string name="donthaveaccount">Dont Have an account?</string>
+    <string name="bestway">Eaiset Way To Search For Websites</string>
+    <string name="webserviceUsername">82984218</string>
+    <string name="webservicePassword">951735</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

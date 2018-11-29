@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_10sdp"
+        android:id="@+id/goToLogin"
+        android:background="@color/projectbackground"
+        android:orientation="horizontal"
+        >
+   <ImageView
+       android:layout_width="@dimen/_40sdp"
+       android:layout_height="@dimen/_40sdp"
+       android:src="@drawable/user"
+       android:background="@drawable/userbackground"
+       />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loginandregist"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15ssp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:weightSum="1"
+        android:id="@+id/newsnav"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_weight=".15"
+            android:layout_width="0dp"
+            app:srcCompat="@drawable/ic_event_note_black_24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_25sdp" />
+        <TextView
+            android:layout_weight=".85"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/news"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:weightSum="1"
+        android:id="@+id/resturantnav"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_weight=".15"
+            android:layout_width="0dp"
+            app:srcCompat="@drawable/ic_restaurant_black_24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_25sdp" />
+        <TextView
+            android:layout_weight=".85"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/resturants"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:weightSum="1"
+        android:id="@+id/shoppingnav"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_weight=".15"
+            android:layout_width="0dp"
+            app:srcCompat="@drawable/ic_shopping_basket_black_24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_25sdp" />
+        <TextView
+            android:layout_weight=".85"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/shopping"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:weightSum="1"
+        android:id="@+id/sportsnav"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_weight=".15"
+            android:layout_width="0dp"
+            app:srcCompat="@drawable/sporticon"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_25sdp" />
+        <TextView
+            android:layout_weight=".85"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/sports"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:weightSum="1"
+        android:id="@+id/generalnav"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_weight=".15"
+            android:layout_width="0dp"
+            app:srcCompat="@drawable/icon"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_25sdp" />
+        <TextView
+            android:layout_weight=".85"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/generalservice"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

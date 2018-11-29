@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/categoriesbackground"
+    tools:context=".view.view.cat">
+<include layout="@layout/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"/>
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        app:tabGravity="center"
+        app:tabTextColor="@android:color/white"
+        android:id="@+id/tablayout"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabMode="fixed"
+        android:background="@color/projectbackground"
+        app:tabMinWidth="@dimen/_100sdp"
+        app:tabIndicatorColor="@color/edittext"
+        app:tabSelectedTextColor="@color/edittext"
+        ></android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/items"></android.support.v4.view.ViewPager>
+</LinearLayout>

@@ -44,7 +44,7 @@ public class spotrs extends Fragment implements interfaceMVP.interfaces.View {
 
     @Override
     public void element() {
- spotrs=(RecyclerView)v.findViewById(R.id.sports);
+     spotrs=(RecyclerView)v.findViewById(R.id.sports);
     }
 
     @Override

@@ -11,10 +11,7 @@
         android:icon="@drawable/mostadded"
         android:title="@string/mostadded"
         />
-    <item android:id="@+id/resourses"
-    android:icon="@drawable/ic_people_outline_black_24dp"
-    android:title="@string/resources"
-    />
+
     <item android:id="@+id/favourites"
         android:icon="@drawable/ic_favorite_black_24dp"
         android:title="@string/mywishlist"

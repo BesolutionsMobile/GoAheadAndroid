@@ -4,18 +4,19 @@ public class catList {
     String logo;
     String url;
     boolean fav=false;
-    int id;
+    int id,favNum;
     String name;
     public catList(boolean fav)
     {
         this.fav=fav;
 
     }
-    public catList(String logo,String url,String name,int id ) {
+    public catList(String logo,String url,String name,int id,int favNum ) {
         this.logo = logo;
         this.url=url;
         this.name=name;
         this.id=id;
+        this.favNum=favNum;
     }
 
     public String getLogo() {
@@ -56,5 +57,13 @@ public class catList {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getFavNum() {
+        return favNum;
+    }
+
+    public void setFavNum(int favNum) {
+        this.favNum = favNum;
     }
 }

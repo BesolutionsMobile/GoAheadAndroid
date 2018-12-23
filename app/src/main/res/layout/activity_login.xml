@@ -4,14 +4,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
+    android:gravity="center"
     android:paddingLeft="@dimen/_20sdp"
     android:paddingRight="@dimen/_20sdp"
     android:background="@color/projectbackground"
     tools:context=".view.view.login">
-    
-<TextView
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:id="@+id/scrollView"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <TextView
     android:layout_width="match_parent"
     android:layout_height="@dimen/_50sdp"
     android:text="Go Ahead"
@@ -30,6 +41,7 @@
         android:layout_height="@dimen/_35sdp"
         android:hint="@string/username"
         android:textSize="@dimen/_13ssp"
+        android:id="@+id/username"
         android:paddingLeft="@dimen/_30sdp"
         android:background="@drawable/editback"/>
 
@@ -52,6 +64,7 @@
             android:layout_height="@dimen/_35sdp"
             android:hint="@string/password"
             android:textSize="@dimen/_13ssp"
+            android:id="@+id/password"
             android:paddingLeft="@dimen/_30sdp"
             android:background="@drawable/editback"/>
 
@@ -98,22 +111,13 @@
     android:orientation="vertical"
     android:gravity="right">
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/skip"
-    android:textSize="@dimen/_14ssp"
-    android:textColor="@android:color/white"
-    android:layout_marginTop="@dimen/_10sdp"/>
-    <ImageView
-        android:layout_width="@dimen/_35sdp"
-        android:layout_height="@dimen/_1sdp"
-        android:background="@android:color/white" />
+
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:orientation="vertical"
+        android:layout_marginBottom="30dp"
         android:gravity="center">
 
         <TextView
@@ -129,4 +133,6 @@
             android:layout_height="@dimen/_1sdp"
             android:background="@android:color/white" />
     </LinearLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

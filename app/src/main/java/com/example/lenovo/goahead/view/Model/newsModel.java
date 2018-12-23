@@ -33,14 +33,16 @@ public class newsModel implements interfaceMVPP.interfaces.Model{
             public void onResponse(JSONObject response) {
                 JSONObject jsonObject = null;
                 try {
+
                     if (response.getString("status").equals("1")) {
                         JSONArray categories = response.getJSONArray("offers");
                         for (int index = 0; index < categories.length(); index++) {
                             JSONObject categoriesObj = categories.getJSONObject(index);
                             String categoriesImg = categoriesObj.getString("image");
-                            categoriesList.add(new catList(categoriesImg,categoriesObj.getString("link"),categoriesObj.getString("name"),categoriesObj.getInt("id")));
+                            categoriesList.add(new catList(categoriesImg,categoriesObj.getString("link"),categoriesObj.getString("name"),categoriesObj.getInt("id"),categoriesObj.getInt("favorite")));
 
                         }
+                        Toast.makeText(context, ""+categoriesList, Toast.LENGTH_SHORT).show();
 
                     } else if (response.getString("status").equals("2"))
                     {
@@ -58,9 +60,8 @@ public class newsModel implements interfaceMVPP.interfaces.Model{
         });
                 RequestQueue requestQueue= Volley.newRequestQueue(context);
         requestQueue.add(jsonObjectRequest);
-        Toast.makeText(context, ""+categoriesList, Toast.LENGTH_SHORT).show();
         return categoriesList;
+        }
 
 
-    }
 }

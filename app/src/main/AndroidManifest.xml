@@ -12,27 +12,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.view.login"></activity>
+        <activity android:name=".view.view.login" />
         <activity android:name=".view.view.select" />
         <activity android:name=".view.view.categories">
 
         </activity>
-        <activity android:name=".view.view.cat" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".view.view.cat" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_id" />
 
         <activity android:name=".view.view.signup" />
-        <activity android:name=".view.view.splashScreen">
+        <activity android:name=".view.view.splashScreen" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+        <activity android:name=".view.view.favourite" />
+        <activity android:name=".view.view.mostAdded"></activity>
     </application>
 
 </manifest>

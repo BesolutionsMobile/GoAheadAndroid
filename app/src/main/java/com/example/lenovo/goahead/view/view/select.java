@@ -31,6 +31,5 @@ public void goToCategories()
             startActivity(new Intent(select.this,categories.class));
             }
     });
-
 }
 }

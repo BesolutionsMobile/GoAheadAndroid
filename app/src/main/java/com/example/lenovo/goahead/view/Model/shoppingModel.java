@@ -11,7 +11,6 @@ public class shoppingModel implements interfaceMVP.interfaces.Model {
     public ArrayList getdata() {
         ArrayList<catList>arrayList=new ArrayList<catList>();
 
-
         return arrayList;
     }
 }

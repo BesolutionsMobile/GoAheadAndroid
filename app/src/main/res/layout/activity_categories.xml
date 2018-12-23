@@ -20,7 +20,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:descendantFocusability="blocksDescendants"
         android:orientation="vertical">
 <include layout="@layout/appbar"/>
@@ -86,18 +85,19 @@
 </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
+
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/nav"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
-            android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            app:itemBackground="@drawable/bottombg"
+            android:layout_alignParentStart="true"
             app:itemIconTint="@color/iconcolor"
+            android:background="@android:color/white"
             app:itemTextColor="@color/iconcolor"
             app:labelVisibilityMode="labeled"
-            app:tabTextAppearance="@style/BottomCustomTabText"
             app:menu="@menu/bar"
+            app:tabTextAppearance="@style/BottomCustomTabText"
             tools:ignore="RtlCompat"></android.support.design.widget.BottomNavigationView>
 </RelativeLayout>
     <LinearLayout
@@ -105,7 +105,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         >
-
         <include
             layout="@layout/navigation"
             android:layout_width="@dimen/_250sdp"

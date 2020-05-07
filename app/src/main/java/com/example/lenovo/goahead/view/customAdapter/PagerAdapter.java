@@ -21,26 +21,26 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     int numOfTabs;
     Context context;
     ArrayList<String>mylist;
+    String id;
 
     private ArrayList<Fragment> myFragments=new ArrayList<Fragment>();
 
-    public PagerAdapter(FragmentManager fm,ArrayList<String>mylist,Context context) {
+    public PagerAdapter(FragmentManager fm,ArrayList<String>mylist,Context context,String id) {
         super(fm);
         this.mylist=mylist;
         this.context=context;
+        this.id=id;
     }
 
     @Override
     public Fragment getItem(int position) {
 
               news fragment = new news();
-              myFragments.add(fragment);
-            Bundle bundle = new Bundle();
-            bundle.putString("position", "" + position);
-            fragment.setArguments(bundle);
-            return myFragments.get(position);
-
-    }
+              Bundle bundle = new Bundle();
+              bundle.putString("position", "" + position);
+              fragment.setArguments(bundle);
+              return fragment;
+              }
 
     @Override
     public int getCount() {

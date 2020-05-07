@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -36,11 +38,12 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.catHolder> {
    ArrayList<catList>mylist;
    public static final String deleteFav="http://coderg.org/goahead_en/User/deleteFavoriteOffer/82984218/951735/";
     public static final String addFav="http://coderg.org/goahead_en/User/addFavoriteOffer/82984218/951735/";
+    int height;
 
-
-    public catAdapter(Context context, ArrayList<catList> mylist) {
+    public catAdapter(int height,Context context, ArrayList<catList> mylist) {
         this.context = context;
         this.mylist = mylist;
+        this.height=height;
     }
 
     @NonNull
@@ -56,6 +59,9 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.catHolder> {
         Picasso.with(context).load(mylist.get(i).getLogo()).into(viewHolder.Logo);
         final String url=mylist.get(i).getUrl();
         final int id=mylist.get(i).getId();
+        viewHolder.text.setText(mylist.get(i).getName());
+
+        //click on item o go to link
         viewHolder.GoToWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,24 +69,57 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.catHolder> {
                 context.startActivity(intent);
             }
         });
+
+        //like
         if(mylist.get(i).getFavNum()==1) {
-            viewHolder.fav.setImageResource(R.drawable.ic_favorite_red_24dp);
+            viewHolder.fav.setImageResource(R.drawable.redfav);
             mylist.get(i).setFav(true);
         }
         viewHolder.fav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(mylist.get(i).isFav()==false){
-                    viewHolder.fav.setImageResource(R.drawable.ic_favorite_red_24dp);
+                    viewHolder.fav.setImageResource(R.drawable.redfav);
                     addDeleteFav(id,addFav);
                     mylist.get(i).setFav(true);
                 }else{
-                    viewHolder.fav.setImageResource(R.drawable.ic_favorite_black_24dp);
+                    viewHolder.fav.setImageResource(R.drawable.whitefav);
                     mylist.get(i).setFav(false);
                     addDeleteFav(id,deleteFav);
-                    }
+                }
             }
         });
+        // Gets linearlayout
+// Gets the layout params that will allow you to resize the layout
+        ViewGroup.LayoutParams params = viewHolder.GoToWeb.getLayoutParams();
+// Changes the height and width to the specified *pixels*
+        switch (i % 5) {
+            // first two items span 3 columns each
+            case 0:
+                params.height = 450;
+                return ;
+
+            case 1:
+                params.height = 350;
+                viewHolder.text.setTextSize(15);
+                // next 3 items span 2 columns each
+            case 2:
+                params.height = 350;
+                viewHolder.text.setTextSize(15);
+                return ;
+
+            case 3:
+                params.height = 350;
+                viewHolder.text.setTextSize(15);
+                case 4:
+                    params.height = 350;
+                    viewHolder.text.setTextSize(15);
+                    return ;
+        }
+
+        viewHolder.GoToWeb.setLayoutParams(params);
+
+
         }
 
     @Override
@@ -89,12 +128,14 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.catHolder> {
     }
     public class catHolder extends RecyclerView.ViewHolder {
         ImageView Logo,fav;
-        LinearLayout GoToWeb;
+        RelativeLayout GoToWeb;
+        TextView text;
         public catHolder(@NonNull View itemView) {
             super(itemView);
             Logo=(ImageView)itemView.findViewById(R.id.logo);
-            GoToWeb=(LinearLayout)itemView.findViewById(R.id.goToWeb);
+            GoToWeb=(RelativeLayout)itemView.findViewById(R.id.goToWeb);
             fav=(ImageView)itemView.findViewById(R.id.fav);
+            text=(TextView)itemView.findViewById(R.id.text);
         }
     }
     public void addDeleteFav(final int id,final String Url)

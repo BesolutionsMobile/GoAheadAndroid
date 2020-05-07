@@ -25,13 +25,12 @@
         <TextView
     android:layout_width="match_parent"
     android:layout_height="@dimen/_50sdp"
-    android:text="Go Ahead"
+    android:text="Login"
     android:textColor="@android:color/white"
     android:layout_marginBottom="@dimen/_80sdp"
-    android:textSize="@dimen/_35sdp"
-    android:fontFamily="cursive"
+    android:textSize="@dimen/_25sdp"
     android:gravity="center"
-    android:textStyle="bold"/>
+   />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -41,6 +40,8 @@
         android:layout_height="@dimen/_35sdp"
         android:hint="@string/username"
         android:textSize="@dimen/_13ssp"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
         android:id="@+id/username"
         android:paddingLeft="@dimen/_30sdp"
         android:background="@drawable/editback"/>
@@ -65,6 +66,9 @@
             android:hint="@string/password"
             android:textSize="@dimen/_13ssp"
             android:id="@+id/password"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
             android:paddingLeft="@dimen/_30sdp"
             android:background="@drawable/editback"/>
 

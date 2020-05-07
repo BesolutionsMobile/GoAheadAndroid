@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public interface interfaceMVP {
     public interface interfaces {
-        interface  View
-        {
+        interface View {
             void element();
+
             void setviewdata(ArrayList data);
         }
-        interface Model{
+
+        interface Model {
             ArrayList getdata();
         }
-        interface presenter{
+
+        interface presenter {
             void getData();
         }
-
-    }
-
+        }
 }

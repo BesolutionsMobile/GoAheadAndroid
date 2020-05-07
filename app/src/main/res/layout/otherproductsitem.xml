@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/otherproduct"
+    android:layout_width="@dimen/_120sdp"
+    android:layout_height="@dimen/_180sdp">
+   <android.support.v7.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:cardUseCompatPadding="true"
+       app:cardElevation="2dp"
+       app:cardCornerRadius="@dimen/_3sdp"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <ImageView
+               android:layout_width="match_parent"
+               android:src="@drawable/pubg"
+               android:padding="@dimen/_2sdp"
+               android:scaleType="fitXY"
+               android:id="@+id/otherProductImg"
+               android:layout_height="@dimen/_90sdp" />
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_20sdp"
+               android:text="Pubg"
+               android:ellipsize="end"
+               android:maxLines="1"
+               android:textColor="@android:color/black"
+               android:textStyle="bold"
+               android:gravity="center"
+               android:id="@+id/otherproducttitle"
+               android:textSize="@dimen/_11ssp"/>
+
+           <TextView
+               android:id="@+id/otherproductdescripition"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:ellipsize="end"
+               android:maxLines="4"
+              android:padding="@dimen/_3sdp"
+               android:text="Pubg consider best game to this time after more than 2000 downloads"
+               android:textSize="@dimen/_10ssp" />
+       </LinearLayout>
+   </android.support.v7.widget.CardView>
+</LinearLayout>

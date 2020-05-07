@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/addnewproduct"
+        android:title="Add New Product" />
+    <item
+        android:id="@+id/myproducts"
+        android:title="My Products" />
+
+</menu>

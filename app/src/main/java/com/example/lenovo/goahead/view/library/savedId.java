@@ -19,4 +19,11 @@ public class savedId {
             boolean value=sharedPreferences.getBoolean("islogin",false);
             return value;
         }
+
+        public String getNumSwithcer(Context context)
+        {
+            SharedPreferences sharedPreferences=context.getSharedPreferences("categoryId",MODE_PRIVATE);
+            String num=sharedPreferences.getString("categoryId","");
+            return num;
+        }
 }

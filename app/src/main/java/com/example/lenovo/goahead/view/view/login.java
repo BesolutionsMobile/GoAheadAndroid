@@ -21,12 +21,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.lenovo.goahead.R;
 import com.example.lenovo.goahead.view.library.progressdialog;
 import com.example.lenovo.goahead.view.library.savedId;
-import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
-import com.facebook.login.LoginManager;
-import com.facebook.login.LoginResult;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,7 +31,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class login extends AppCompatActivity {
-    CallbackManager callbackManager;
     Button signin;
     TextView regist;
     String Emaill,Passwordd;
@@ -60,6 +54,11 @@ public class login extends AppCompatActivity {
         CheckLogin();
         }
 
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
+
 
     public void EditText()
     {
@@ -69,7 +68,7 @@ public class login extends AppCompatActivity {
     }
 
 
-        public void CheckLogin()
+    public void CheckLogin()
         {
 
             EditText();
@@ -77,7 +76,7 @@ public class login extends AppCompatActivity {
             signin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    StringRequest Login=new StringRequest(Request.Method.GET, "http://webdesign.be4em.info/goahead_en/User/login/82984218/951735/"+Email.getText().toString()+"/"+Password.getText().toString(), new Response.Listener<String>() {
+                    StringRequest Login=new StringRequest(Request.Method.GET, "http://coderg.org/goahead_en/User/login/82984218/951735/"+Email.getText().toString()+"/"+Password.getText().toString(), new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             try {
@@ -90,9 +89,8 @@ public class login extends AppCompatActivity {
                                     progressdialog.progressDialog(login.this);
                                     goToMain(id);
                                     id();
-
-
-                                }else if(jsonObject.getString("status").equals("2"))
+                                    finish();
+                                    }else if(jsonObject.getString("status").equals("2"))
                                 {
                                     Toast.makeText(login.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                                     Email.setError("Error");
@@ -104,8 +102,7 @@ public class login extends AppCompatActivity {
                             } catch (JSONException e) {
                                 Toast.makeText(login.this,"SomeThing Went Wrong", Toast.LENGTH_SHORT).show();
                             }
-
-                        }
+                            }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
@@ -119,18 +116,14 @@ public class login extends AppCompatActivity {
                             Map<String, String> params = new HashMap<String, String>();
                             params.put("mail", Emaill);
                             params.put("password", Passwordd);
-
                             return params;
                         }};
-
                     RequestQueue requestQueue = Volley.newRequestQueue(login.this);
                     requestQueue.add(Login);
+                    }
+                    });
+            }
 
-                }
-
-            });
-
-        }
     public void goToRegist()
     {
         regist.setOnClickListener(new View.OnClickListener() {
@@ -143,8 +136,6 @@ public class login extends AppCompatActivity {
     }
      public void goToMain(String id)
      {
-
-
          Intent intent=new Intent(login.this,categories.class);
          intent.putExtra("id",id);
          startActivity(intent);
@@ -163,7 +154,7 @@ public class login extends AppCompatActivity {
         savedId = new savedId();
         if (savedId.getUserBoolean(login.this) == true) {
             startActivity(new Intent(login.this, categories.class));
+            finish();
         }
     }
-
 }

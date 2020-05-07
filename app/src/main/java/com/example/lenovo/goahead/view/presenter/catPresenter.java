@@ -16,7 +16,6 @@ public class catPresenter implements interfaceMVP.interfaces.presenter {
         initPresenter();
     }
     private void initPresenter() {
-        model = new catModel();
         views.element();
     }
 

@@ -65,7 +65,7 @@ public class resturants extends Fragment implements interfaceMVP.interfaces.View
     public void setviewdata(ArrayList data) {
         layoutManager=new GridLayoutManager(getActivity(),2);
         catList.setLayoutManager(layoutManager);
-        adapter=new catAdapter(getActivity(),data);
+        adapter=new catAdapter(500,getActivity(),data);
         catList.setAdapter(adapter);
     }
 
@@ -87,7 +87,7 @@ public class resturants extends Fragment implements interfaceMVP.interfaces.View
                     }
                     layoutManager=new GridLayoutManager(getActivity(),2);
                     catList.setLayoutManager(layoutManager);
-                    adapter=new catAdapter(getActivity(),arrayList);
+                    adapter=new catAdapter(500,getActivity(),arrayList);
                     catList.setAdapter(adapter);
                 } catch (JSONException e) {
                     Toast.makeText(getActivity(), "ef", Toast.LENGTH_SHORT).show();

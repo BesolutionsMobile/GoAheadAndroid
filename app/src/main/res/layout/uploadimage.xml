@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:text="Upload Product Image"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/projectbackground"
+        android:gravity="center"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/wordcolor"/>
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/uploadedimg"
+            android:src="@drawable/uploadedimg"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:text="@string/uploadimage"
+            android:gravity="center"
+            android:id="@+id/uplaodimage"
+            android:textSize="@dimen/_13ssp"
+            android:background="@drawable/backdrawble"
+            android:layout_marginTop="@dimen/_50sdp"
+            />
+        <ViewSwitcher
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:id="@+id/viewswitcher"
+            android:layout_marginTop="@dimen/_20sdp"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/next"
+                android:gravity="center"
+                android:background="@drawable/buttonbacknocolor"
+                android:textColor="@android:color/white"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_35sdp" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/cancel"
+                    android:gravity="center"
+                    android:id="@+id/cancel"
+                    android:background="@drawable/buttonbackwhite"
+                    android:textColor="@android:color/black"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_height="@dimen/_35sdp" />
+                <TextView
+                    android:text="@string/next"
+                    android:gravity="center"
+                    android:id="@+id/next"
+                    android:background="@drawable/buttonback"
+                    android:textColor="@android:color/white"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_35sdp" />
+            </LinearLayout>
+        </ViewSwitcher>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -7,9 +7,16 @@
     android:id="@+id/drawer"
     android:layout_height="match_parent"
     tools:context=".view.view.categories">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <ViewSwitcher
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:id="@+id/viewswitch">
+
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,63 +35,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:orientation="horizontal">
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/_30sdp"
-        android:paddingRight="@dimen/_30sdp"
-        android:id="@+id/categorieslist"></android.support.v7.widget.RecyclerView>
+        android:id="@+id/categorieslist"
+        android:layout_marginBottom="@dimen/_50sdp"
+        ></android.support.v7.widget.RecyclerView>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="@dimen/_230sdp"
-        android:layout_height="@dimen/_90sdp"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:layout_marginBottom="@dimen/_75sdp"
-        android:padding="@dimen/_4sdp"
-        android:id="@+id/generalservice"
-        android:background="@drawable/whitecategory"
-        android:layout_marginTop="@dimen/_20sdp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_30ssp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="21dp"
-                android:src="@drawable/icon"
-                tools:ignore="RtlCompat" />
-
-            <RelativeLayout
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:background="#52000000">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:text="@string/generalservice"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/_12ssp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </RelativeLayout>
-    </LinearLayout>
-</LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
-
+                android:gravity="center"
+                >
+                <ImageView android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:src="@drawable/prgress_dialog_animate"
+                    android:layout_gravity="center"
+                    android:id="@+id/loading"
+                    android:padding="@dimen/_5sdp"
+                    xmlns:android="http://schemas.android.com/apk/res/android" />
+            </LinearLayout>
+        </ViewSwitcher>
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/nav"

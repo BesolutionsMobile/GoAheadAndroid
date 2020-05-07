@@ -16,4 +16,8 @@
         android:icon="@drawable/ic_favorite_black_24dp"
         android:title="@string/mywishlist"
         />
+    <item android:id="@+id/Familiesproduced"
+        android:icon="@drawable/product"
+        android:title="@string/Familiesproduced"
+        />
 </menu>

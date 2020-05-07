@@ -25,13 +25,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:text="Go Ahead"
+        android:text="Sign up"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="@dimen/_40sdp"
-        android:textSize="@dimen/_35sdp"
-        android:fontFamily="cursive"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:textSize="@dimen/_22sdp"
         android:gravity="center"
-        android:textStyle="bold"/>
+      />
+            <ImageView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:id="@+id/addimage"
+                android:src="@drawable/addimage"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -40,6 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
             android:hint="@string/username"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:id="@+id/username"
             android:textSize="@dimen/_13ssp"
             android:paddingLeft="@dimen/_30sdp"
@@ -65,6 +73,8 @@
         android:hint="@string/email"
         android:id="@+id/email"
         android:textSize="@dimen/_13ssp"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
         android:paddingLeft="@dimen/_30sdp"
         android:background="@drawable/editback"/>
 
@@ -90,6 +100,8 @@
             android:id="@+id/phone"
             android:textSize="@dimen/_13ssp"
             android:paddingLeft="@dimen/_30sdp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:background="@drawable/editback"/>
 
         <ImageView
@@ -111,8 +123,11 @@
             android:layout_height="@dimen/_35sdp"
             android:hint="@string/password"
             android:textSize="@dimen/_13ssp"
+            android:inputType="textPassword"
             android:id="@+id/password"
             android:paddingLeft="@dimen/_30sdp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             android:background="@drawable/editback"/>
 
         <ImageView

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.view.productDetails">
+    <ViewSwitcher
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:id="@+id/viewswitch">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <ImageView android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:src="@drawable/prgress_dialog_animate"
+                android:layout_gravity="center"
+                android:id="@+id/loading"
+                android:padding="@dimen/_5sdp"
+                xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <include layout="@layout/appbarproducts"></include>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/indicator"
+            android:layout_marginBottom="4dp">
+        </android.support.v4.view.ViewPager>
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            app:ci_drawable="@drawable/selected"
+            app:ci_drawable_unselected="@drawable/round"
+            app:ci_width="@dimen/_6sdp"
+            app:ci_height="@dimen/_6sdp"
+            app:ci_margin="@dimen/_5sdp"
+            android:padding="@dimen/_3sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10ssp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:id="@+id/Title"
+        android:textColor="@color/projectbackground"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/projectbackground"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="Product Descripition"
+                android:textSize="@dimen/_11ssp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1ssp"
+                android:background="#c1c1c1"
+                android:layout_marginTop="@dimen/_5ssp"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:orientation="horizontal">
+         <TextView
+             android:layout_width="@dimen/_70ssp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/_5ssp"
+             android:text="Name"
+             android:textColor="@android:color/black"
+             android:textSize="@dimen/_12ssp"
+             android:textStyle="bold"
+             />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:text="PLAYERUNKNOWN'S BATTLEGROUNDS"
+                android:textSize="@dimen/_11ssp"
+                android:id="@+id/productname"
+                android:layout_marginLeft="@dimen/_15ssp"
+                />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="@dimen/_70ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5ssp"
+                    android:text="Price"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5ssp"
+                    android:text="5200"
+                    android:id="@+id/productPrice"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_marginLeft="@dimen/_15ssp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5ssp"
+                    android:text="$"
+                    android:textSize="@dimen/_11ssp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10ssp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="@dimen/_70ssp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5ssp"
+                    android:text="Descripition"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5ssp"
+                    android:id="@+id/productDescripition"
+                    android:text="PLAYERUNKNOWN'S BATTLEGROUNDS is the most popular game in this days"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_marginLeft="@dimen/_15ssp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    </ViewSwitcher>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:text="About The Seller"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/goToSeller"
+        android:background="@color/buttonback"
+        android:textSize="@dimen/_12ssp"
+        />
+
+</RelativeLayout>

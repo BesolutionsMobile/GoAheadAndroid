@@ -51,7 +51,7 @@ public class shopping extends Fragment implements interfaceMVP.interfaces.View  
     public void setviewdata(ArrayList data) {
         layoutManager=new GridLayoutManager(getActivity(),2);
         shopping.setLayoutManager(layoutManager);
-        adapter=new catAdapter(getActivity(),data);
+        adapter=new catAdapter(500,getActivity(),data);
         shopping.setAdapter(adapter);
     }
 }

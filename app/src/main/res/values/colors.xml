@@ -3,7 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="projectbackground">#112482</color>
+    <color name="projectbackground">#3b5998</color>
     <color name="edittext">#FEFBCF</color>
     <color name="buttonback">#AEAC80</color>
     <color name="wordcolor">#9BA3A3</color>
@@ -11,4 +11,5 @@
     <color name="iconcolor">#818181</color>
     <color name="categoriesbackground">#E6E6E6</color>
     <color name="category2back">#F2F2F2</color>
+    <color name="red">#ff2600</color>
 </resources>

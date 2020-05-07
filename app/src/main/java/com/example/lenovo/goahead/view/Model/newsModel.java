@@ -62,6 +62,4 @@ public class newsModel implements interfaceMVPP.interfaces.Model{
         requestQueue.add(jsonObjectRequest);
         return categoriesList;
         }
-
-
 }

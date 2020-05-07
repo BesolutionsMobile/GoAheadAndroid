@@ -51,7 +51,7 @@ public class spotrs extends Fragment implements interfaceMVP.interfaces.View {
     public void setviewdata(ArrayList data) {
         layoutManager=new GridLayoutManager(getActivity(),2);
         spotrs.setLayoutManager(layoutManager);
-        adapter=new catAdapter(getActivity(),data);
+        adapter=new catAdapter(500,getActivity(),data);
         spotrs.setAdapter(adapter);
     }
 }

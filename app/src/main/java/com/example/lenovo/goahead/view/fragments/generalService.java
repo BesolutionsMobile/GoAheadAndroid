@@ -50,7 +50,7 @@ public class generalService extends Fragment  implements interfaceMVP.interfaces
     public void setviewdata(ArrayList data) {
         layoutManager=new GridLayoutManager(getActivity(),2);
         generalList.setLayoutManager(layoutManager);
-        adapter=new catAdapter(getActivity(),data);
+        adapter=new catAdapter(500,getActivity(),data);
         generalList.setAdapter(adapter);
     }
 }

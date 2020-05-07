@@ -1,70 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <ViewSwitcher
         android:layout_width="match_parent"
         android:layout_height="@dimen/_130sdp"
         android:id="@+id/viewswitch">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_130sdp"
-        android:gravity="center_vertical"
-        android:paddingLeft="@dimen/_10sdp"
-        android:id="@+id/goToLogin"
-        android:background="@color/projectbackground"
-        android:orientation="horizontal"
-        >
-   <ImageView
-       android:layout_width="@dimen/_40sdp"
-       android:layout_height="@dimen/_40sdp"
-       android:src="@drawable/user"
-       android:background="@drawable/userbackground"
-       />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/loginandregist"
-            android:textStyle="bold"
-            android:layout_marginLeft="@dimen/_15sdp"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/_15ssp"
-            />
-    </LinearLayout>
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/_130sdp"
             android:gravity="center_vertical"
-            android:id="@+id/logout"
             android:paddingLeft="@dimen/_10sdp"
             android:background="@color/projectbackground"
             android:orientation="horizontal"
             >
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/user"
+                android:id="@+id/userprofile"
                 android:background="@drawable/userbackground"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/logout"
+                android:id="@+id/userName"
                 android:textStyle="bold"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/_15ssp"
                 />
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/goToLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:background="@color/projectbackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_10sdp">
+
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/userbackground"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:text="@string/loginandregist"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
     </ViewSwitcher>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:weightSum="1"
+        android:id="@+id/addnewproduct"
+        android:background="@color/categoriesbackground"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_weight=".1"
+            android:layout_width="0dp"
+            android:src="@drawable/addd"
+            android:padding="@dimen/_5sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_weight=".9"
+            android:layout_width="0dp"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:id="@+id/title"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="@string/addnewcategory"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:weightSum="1"
+            android:id="@+id/myproducts"
+            android:background="@color/categoriesbackground"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_weight=".1"
+                android:layout_width="0dp"
+                android:src="@drawable/myproduct"
+                android:padding="@dimen/_5sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_weight=".9"
+                android:layout_width="0dp"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="@string/myproducts"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@android:color/black"/>
+
   <android.support.v7.widget.RecyclerView
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_10sdp"
       android:id="@+id/navlist">
   </android.support.v7.widget.RecyclerView>
-
-
-</LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/logout"
+        android:orientation="vertical"
+        android:background="@color/projectbackground"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/logout"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13ssp"
+            />
+    </LinearLayout>
+</RelativeLayout>

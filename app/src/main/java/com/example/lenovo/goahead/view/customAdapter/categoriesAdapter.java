@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,6 +54,7 @@ public class categoriesAdapter extends RecyclerView.Adapter<categoriesAdapter.ca
             public void onClick(View v) {
                 Intent pass=new Intent(context,cat.class);
                 pass.putExtra("position",i);
+                pass.putExtra("cat_id",""+mylist.get(i).getId());
                 v.getContext().startActivity(pass);
                 }
         });
@@ -66,12 +68,12 @@ public class categoriesAdapter extends RecyclerView.Adapter<categoriesAdapter.ca
     public class categoriesHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView background;
-        LinearLayout categories;
+        RelativeLayout categories;
         public categoriesHolder(@NonNull View itemView) {
             super(itemView);
             title=(TextView)itemView.findViewById(R.id.txtback);
             background=(ImageView)itemView.findViewById(R.id.categoriesback);
-            categories=(LinearLayout)itemView.findViewById(R.id.categoriesItem);
+            categories=(RelativeLayout)itemView.findViewById(R.id.categoriesItem);
         }
     }
 

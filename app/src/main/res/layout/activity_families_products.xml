@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    tools:context=".view.view.familiesProducts">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+ <include layout="@layout/appbar" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FamiliesproductsList"
+        android:layout_marginBottom="@dimen/_45sdp"></android.support.v7.widget.RecyclerView>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:itemIconTint="@color/iconcolor"
+        android:background="@android:color/white"
+        app:itemTextColor="@color/iconcolor"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bar"
+        app:tabTextAppearance="@style/BottomCustomTabText"
+        tools:ignore="RtlCompat"></android.support.design.widget.BottomNavigationView>
+</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        >
+        <include
+            layout="@layout/navigation"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="match_parent" /></LinearLayout>
+</android.support.v4.widget.DrawerLayout>

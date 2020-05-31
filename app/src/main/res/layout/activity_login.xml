@@ -8,7 +8,7 @@
     android:gravity="center"
     android:paddingLeft="@dimen/_20sdp"
     android:paddingRight="@dimen/_20sdp"
-    android:background="@color/projectbackground"
+    android:background="@drawable/auth_bg"
     tools:context=".view.view.login">
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
